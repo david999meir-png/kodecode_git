@@ -69,6 +69,75 @@ def update_tags_list(index_list:list, tags_list: list, guess:str) -> list:
     return tags_list
 
 
+def drawing_lines(tries_left: int) -> str:
+    stages = [
+            """
+    +---+
+    |   |
+    O   |
+    /|\\  |
+    / \\  |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+    O   |
+    /|\\  |
+    /    |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+    O   |
+    /|\\  |
+        |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+    O   |
+    /|   |
+        |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+    O   |
+    |   |
+        |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+    O   |
+        |
+        |
+        |
+    ========
+    """,
+            """
+    +---+
+    |   |
+        |
+        |
+        |
+        |
+    ========
+    """
+        ]
+    print(stages[tries_left])
+
+
 def main():
     tries_count = 6
     secret_word = choose_random_word(words)
@@ -82,9 +151,11 @@ def main():
         print(f"letter that you guesed: {wrong_guesses_set if wrong_guesses_set else 0}")
         guess = get_guess()
         correct_guess = check_guess_in_word(guess, secret_word)
+
         
         if not correct_guess:
             tries_count -= 1
+            drawing_lines(tries_count)
             wrong_guesses_set.add(guess)
             continue
 
@@ -100,11 +171,3 @@ def main():
         print("G A M E   O V E R ! !")
         print(f"the secret word was {secret_word}")
         print("G O O D   B Y . . .")
-
-
-
-    
-
-
-
-

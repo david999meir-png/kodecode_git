@@ -78,7 +78,8 @@ def main():
 
     while tries_count:
         print(tag_for_user)
-        print(f"tries: {tries_count}\nletter that you guesed: {wrong_guesses_set}")
+        print(f"tries: {tries_count}")
+        print(f"letter that you guesed: {wrong_guesses_set if wrong_guesses_set else 0}")
         guess = get_guess()
         correct_guess = check_guess_in_word(guess, secret_word)
         

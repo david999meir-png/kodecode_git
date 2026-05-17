@@ -104,13 +104,10 @@ assert (marge_sorted_lists([1, 3, 5], [2, 4, 6])) == [1, 2, 3, 4, 5, 6]
 # exersice 8
 
 def rutine_list(list_: list, k: int) -> list:
-    max_range = len(list_) - 1
-    range_ = (k + 1) if (k + 1) < max_range else max_range
-    for _ in range(range_):
+    for _ in range(k+1):
         list_.append(list_.pop(0))
 
     return list_
-
 
 assert (rutine_list([1, 2, 3, 4, 5], k = 2))  == [4, 5, 1, 2, 3]
 

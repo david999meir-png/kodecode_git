@@ -107,12 +107,15 @@ assert (duble_keys({"a": 1, "b": 2, "c": 3}, {"b": 9, "c": 8, "d": 7})) == ["b",
 
 def most_frequent_value(d: dict) -> int:
     value = list(d.values())
-    max_v = 0
+    max_v = [0]
     for i in value:
         c = value.count(i)
-        if c > max_v:
-            max_v = i
+        if c > max_v[0]:
+            max_v[0] = i
+        elif c == max_v:
+            max_v.append(i)
+
     
-    return max_v
+    return tuple(max_v) if len(max_v) > 1 else max_v[0]
 
 assert (most_frequent_value({"a": 1, "b": 2, "c": 1, "d": 3, "e": 1})) == 1

@@ -1,0 +1,10 @@
+1 | pending | Buy groceries
+2 | DONE | Clean the kitchen
+3 | pending | Finish Python homework
+4 | DONE | Call the dentist
+5 | pending | Pay electricity bill
+6 | pending | Read 20 pages of a book
+7 | DONE | Workout for 30 minutes
+8 | pending | Wash the car
+9 | DONE | Backup computer files
+10 | pending | Prepare dinner

@@ -1,0 +1,14 @@
+2026-05-26 14:24:49,486 | logger_a | INFO | one
+2026-05-26 14:24:49,487 | logger_b | INFO | two
+2026-05-26 14:28:53,113 | logger_a | INFO | one
+2026-05-26 14:28:53,114 | logger_b | INFO | two
+2026-05-26 14:29:10,640 | logger_a | INFO | one
+2026-05-26 14:29:10,640 | logger_b | INFO | two
+2026-05-26 14:29:34,245 | logger_a | INFO | one
+2026-05-26 14:29:34,245 | logger_b | INFO | two
+2026-05-26 14:44:25,324 | logger_a | INFO | one
+2026-05-26 14:44:25,325 | logger_b | INFO | two
+2026-05-26 14:44:25,326 | __main__ | INFO | start action:= user id:=5252 requst id:=12245687442
+2026-05-26 14:44:25,326 | __main__ | WARNING | empty action in user id:=5252 requst id=12245687442
+2026-05-26 14:44:25,326 | __main__ | INFO | start action:=loging user id:=12356 requst id:=122452
+2026-05-26 14:44:25,327 | __main__ | INFO | action=loging in user id=12356 completed. requst id=122452

@@ -1,0 +1,23 @@
+2026-05-25 17:22:33,619 | INFO | __main__
+2026-05-25 17:22:33,621 | WARNING | __main__
+2026-05-25 17:22:33,623 | ERROR | __main__
+2026-05-25 17:24:09,144 | INFO | __main__ | stock update!
+2026-05-25 17:24:09,147 | WARNING | __main__ | stock over!
+2026-05-25 17:24:09,148 | ERROR | __main__ | stock doesn't found!
+2026-05-25 17:32:08,239 | INFO | __main__ | stock update!
+2026-05-25 17:32:08,242 | WARNING | __main__ | stock over!
+2026-05-25 17:32:08,243 | ERROR | __main__ | stock doesn't found!
+2026-05-25 17:32:08,244 | INFO | __main__ | check filename=C:\Users\david\Downloads\03 logging_exercises.docx.pdf
+2026-05-25 17:33:23,623 | INFO | __main__ | stock update!
+2026-05-25 17:33:23,625 | WARNING | __main__ | stock over!
+2026-05-25 17:33:23,627 | ERROR | __main__ | stock doesn't found!
+2026-05-25 17:33:23,628 | INFO | __main__ | check filename=C:\Users\david\Downloads\logging_exercises.docx.pdf
+2026-05-26 14:28:53,114 | INFO | __main__ | stock update!
+2026-05-26 14:28:53,117 | WARNING | __main__ | stock over!
+2026-05-26 14:28:53,119 | ERROR | __main__ | stock doesn't found!
+2026-05-26 14:29:10,641 | INFO | __main__ | stock update!
+2026-05-26 14:29:10,644 | WARNING | __main__ | stock over!
+2026-05-26 14:29:10,645 | ERROR | __main__ | stock doesn't found!
+2026-05-26 14:29:34,246 | INFO | __main__ | stock update!
+2026-05-26 14:29:34,248 | WARNING | __main__ | stock over!
+2026-05-26 14:29:34,249 | ERROR | __main__ | stock doesn't found!

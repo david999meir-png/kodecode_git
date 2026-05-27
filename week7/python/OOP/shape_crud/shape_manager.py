@@ -7,9 +7,7 @@ from square import Square
 from Triangle import Tringle
 
 
-
 class ShapeManager:
-
     def __init__(self):
         self.counter_id = 0
         self.shapes = []
@@ -24,6 +22,7 @@ class ShapeManager:
 
         new_object = type_shape.from_dict(data)
         self.shapes.append(new_object)
+        self.save_to_json()
 
         return new_object
 
@@ -52,6 +51,7 @@ class ShapeManager:
             if shape_for_remove is None:
                 raise ValueError(f"{shape_id} wasn't found.")
             self.shapes.remove(shape_for_remove)
+            self.save_to_json()
             
     def save_to_json(self):
         all_shapes_dict = []
@@ -62,13 +62,12 @@ class ShapeManager:
         with open("shapes.json", "w", encoding="utf-8") as f:
             json.dump(all_shapes_dict, f)        
 
-
     def load_from_json(self):
 
         with open("shapes.json", "r", encoding="utf-8") as f:
             data = json.load(f)
             for shape in data:
-                type_class = ShapeManager.get_class_type(shape)
+                type_class = self.get_class_type(shape)
 
                 new_object = type_class.from_dict(shape)
                 self.shapes.append(new_object)
@@ -86,3 +85,4 @@ class ShapeManager:
         type_class = shape_map[type_shape]
 
         return type_class
+    

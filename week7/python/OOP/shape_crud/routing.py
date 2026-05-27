@@ -2,7 +2,7 @@ from shape_manager import ShapeManager
 
 
 class Menu:
-    def __init__(self, manager):
+    def __init__(self, manager: ShapeManager):
         self.manager = manager
         
 
@@ -34,6 +34,9 @@ class Menu:
     def processing_choice(choice: str) -> dict:
         if choice == "1":
             radius = input("enter radius:\n")
+            if not Menu.is_valid_num(radius):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "circle",
@@ -42,6 +45,9 @@ class Menu:
             
         elif choice == "2":
             side = input("enter side:\n")
+            if not Menu.is_valid_num(side):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "hexagon",
@@ -50,7 +56,13 @@ class Menu:
             
         elif choice == "3":
             width = input("enter width:\n")
+            if not Menu.is_valid_num(width):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             height = input("enter haight:\n")
+            if not Menu.is_valid_num(height):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "rectangle",
@@ -60,6 +72,9 @@ class Menu:
 
         elif choice == "4":
             side = input("enter side:\n")
+            if not Menu.is_valid_num(side):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "square",
@@ -68,6 +83,9 @@ class Menu:
             
         elif choice == "5":
             side = input("enter side:\n")
+            if not Menu.is_valid_num(side):
+                raise ValueError("invalid input, please enter numnet only.")
+            
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "triangle",
@@ -77,6 +95,14 @@ class Menu:
         else:
             raise ValueError("wrong choice, please folow the menu.")
         return shape_dict
+
+    @staticmethod
+    def is_valid_num(n: str):
+        try:
+            n = float(n)
+            return True
+        except ValueError:
+            return False
 
     def flow_menu(self):
         Menu.show_main_menu()
@@ -100,6 +126,7 @@ class Menu:
             
             shape_for_update = Menu.processing_choice(inner_choice)
             shape_for_update["shape_id"] = shape_id
+            self.manager.update_shape(shape_for_update)
         
         elif choice == "4":
             shape_id = input("enter shape id:\n")

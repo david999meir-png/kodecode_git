@@ -10,23 +10,31 @@ class Shape(ABC):
         logger.debug("object %s created, id %s", self.shape_type, self.id)
 
     @property
-    def get_area(self):
+    def get_area(self) -> float:
+        """Calculates and returns the area of the shape."""
+
         pass
 
     @property
-    def get_perimeter(self):
+    def get_perimeter(self) -> float:
+        """Calculates and returns the perimeter of the shape."""
+
         pass
 
     @abstractmethod
-    def to_dict(self):
+    def to_dict(self) -> None:
+        """Converts the shape object into a dictionary format."""
+
         pass
 
     @classmethod
-    def from_dict(cls, data: dict):
+    def from_dict(cls, data: dict) -> Shape:
+        """Creates a new shape object from a given dictionary."""
+
         return cls(**data)
     
     @abstractmethod
-    def __str__(self):
+    def __str__(self) -> str:
         pass
 
 

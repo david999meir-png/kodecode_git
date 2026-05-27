@@ -13,7 +13,9 @@ class ShapeManager:
         self.shapes = []
         self.load_from_json()
 
-    def create_shape(self, data: dict): 
+    def create_shape(self, data: dict) -> Shape:
+        """Creates a new shape object and adds it to the system."""
+
         type_shape = ShapeManager.get_class_type(data)
 
         if data["shape_id"] == None:
@@ -26,11 +28,15 @@ class ShapeManager:
 
         return new_object
 
-    def get_all_shapes(self):
+    def get_all_shapes(self) -> None:
+        """Prints the details of all currently saved shapes."""
+
         for s in self.shapes:
             print(s)
     
-    def update_shape(self, shape_id: int, dic: dict):
+    def update_shape(self, shape_id: int, dic: dict) -> None:
+            """Updates an existing shape with new data based on its ID."""
+
             shape_for_update = self.search_shape_by_id(shape_id)
             if shape_for_update is None:
                 raise ValueError(f"{shape_id} wasn't found")
@@ -38,14 +44,18 @@ class ShapeManager:
             self.shapes.remove(shape_for_update)
             self.create_shape(dic)
 
-    def search_shape_by_id(self, shape_id):
+    def search_shape_by_id(self, shape_id) -> None | Shape:
+        """Searches and returns a shape object by its ID, or None if not found."""
+
         for shape in self.shapes:
             if shape.id != int(shape_id):
                 continue
             return shape
         return None
     
-    def delete_shape(self, shape_id):
+    def delete_shape(self, shape_id) -> None:
+            """Removes a shape from the system using its ID."""
+
             shape_for_remove = self.search_shape_by_id(shape_id)
 
             if shape_for_remove is None:
@@ -54,7 +64,9 @@ class ShapeManager:
             self.shapes.remove(shape_for_remove)
             self.save_to_json()
             
-    def save_to_json(self):
+    def save_to_json(self) -> None:
+        """Saves all current shapes from the system into a JSON file."""
+
         all_shapes_dict = []
         for shape in self.shapes:
             get_dict = shape.to_dict()
@@ -63,7 +75,9 @@ class ShapeManager:
         with open("shapes.json", "w", encoding="utf-8") as f:
             json.dump(all_shapes_dict, f)        
 
-    def load_from_json(self):
+    def load_from_json(self) -> None:
+        """Loads historical shapes from the JSON file into the system."""
+
         try:
             with open("shapes.json", "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -79,7 +93,7 @@ class ShapeManager:
             raise
 
     @staticmethod
-    def get_class_type(dic: dict):
+    def get_class_type(dic: dict) -> Shape:
         shape_map = {
             "circle": Circle,
             "hexagon": Hexagon, 

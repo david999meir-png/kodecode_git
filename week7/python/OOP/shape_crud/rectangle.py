@@ -12,14 +12,14 @@ class Rectangle(Shape):
 
     
     @property
-    def get_area(self):
+    def get_area(self) -> float:
         return self.width * self.height
     
     @property
-    def get_perimeter(self):
+    def get_perimeter(self) -> float:
         return (self.height*2) + (self.width*2)
     
-    def to_dict(self):
+    def to_dict(self) -> dict:
         object_dict = {
                        "shape_id": self.id,
                        "shape_type": self.shape_type,
@@ -28,5 +28,5 @@ class Rectangle(Shape):
                         }  
         return object_dict 
     
-    def __str__(self):
+    def __str__(self) -> str:
         return f'shape id: {self.id} shape type: {self.shape_type} width: {self.width} height: {self.height}'

@@ -3,7 +3,7 @@ import logging
 def set_logger(name):
     main_logger = logging.getLogger()
     main_logger.setLevel(level=logging.DEBUG)
-    
+
     if not main_logger.handlers:
         stream_handler = logging.StreamHandler()
         file_handler = logging.FileHandler("app.log")

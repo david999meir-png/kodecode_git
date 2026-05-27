@@ -10,14 +10,14 @@ class Hexagon(Shape):
         self.side = side
     
     @property
-    def get_area(self):
+    def get_area(self) -> float:
         return ((3*3**0.5)/2) * (self.side**2)
     
     @property
-    def get_perimeter(self):
+    def get_perimeter(self) -> float:
         return self.side * 6
     
-    def to_dict(self):
+    def to_dict(self) -> dict:
         object_dict = {
                        "shape_id": self.id,
                        "shape_type": self.shape_type,
@@ -25,6 +25,6 @@ class Hexagon(Shape):
                         }  
         return object_dict 
     
-    def __str__(self):
+    def __str__(self) -> str:
         return f'shape id: {self.id} shape type: {self.shape_type} side: {self.side}'
     

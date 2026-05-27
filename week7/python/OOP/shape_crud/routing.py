@@ -7,7 +7,7 @@ class Menu:
         
 
     @staticmethod
-    def show_main_menu():
+    def show_main_menu() -> None:
         print("===== main menu =====")
         print("Add shape .1")
         print("Show all shapes .2")
@@ -16,7 +16,7 @@ class Menu:
         print("Exit .5")
 
     @staticmethod
-    def show_shapes_menu():
+    def show_shapes_menu() -> None:
         print("Shape Menu")
         print("1. Circle")
         print("2. Hexagon")
@@ -26,7 +26,7 @@ class Menu:
         print("0. Back / Exit")
 
     @staticmethod
-    def get_user_choice():
+    def get_user_choice() -> str:
         user_choice = input("enrer your choice:\n")
         return user_choice
     
@@ -97,14 +97,16 @@ class Menu:
         return shape_dict
 
     @staticmethod
-    def is_valid_num(n: str):
+    def is_valid_num(n: str) -> bool:
         try:
             n = float(n)
             return True
         except ValueError:
             return False
 
-    def flow_menu(self):
+    def flow_menu(self) -> str | None:
+        """Starts the main interactive menu loop for the user."""
+
         Menu.show_main_menu()
         choice = Menu.get_user_choice()
 
@@ -139,5 +141,3 @@ class Menu:
         else:
             raise ValueError("wrong choice, please folow the menu.")
             
-    def load_histoty(self) -> None:
-        self.manager.load_from_json()

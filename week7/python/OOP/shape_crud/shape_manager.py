@@ -1,11 +1,17 @@
 import json
 from shape import Shape
+from Hexagon import Hexagon
+from circle import Circle
+from rectangle import Rectangle
+from square import Square
+from Triangle import Tringle
+
 
 
 class ShapeManager:
 
     def __init__(self):
-        counter_id = 0
+        self.counter_id = 0
         self.shapes = [Shape]
         self.load_from_json()
 
@@ -46,10 +52,17 @@ class ShapeManager:
             json.dump(all_shapes_dict, f)        
 
 
-    # def load_from_json(self):
-    #     with open("shapes.json", "r", encoding="utf-8") as f:
-    #         data = json.load(f)
-    #         for shape in data:
-
-        
-    #     return data
+    def load_from_json(self):
+        shape_maps = {"circle": Circle,
+                      "hexagon": Hexagon, 
+                      "rectangle": Rectangle, 
+                      "square": Square,
+                      "triangle": Tringle
+                      }
+        with open("shapes.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+            for shape in data:
+                type_class = shape_maps[shape["shape_type"]]
+                
+                new_object = type_class.from_dict(shape)
+                self.shapes.append(new_object)

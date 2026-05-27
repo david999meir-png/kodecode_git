@@ -20,3 +20,13 @@ class Shape(ABC):
     @abstractmethod
     def to_dict(self):
         pass
+
+    @abstractmethod
+    def from_str(self, str):
+        pass
+    
+    @abstractmethod
+    def __str__(self):
+        pass
+
+

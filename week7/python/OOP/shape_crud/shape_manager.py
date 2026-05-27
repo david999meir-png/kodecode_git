@@ -9,14 +9,13 @@ class ShapeManager:
         self.shapes = [Shape]
         self.load_from_json()
 
-    def create_shape(self, shape: tuple): 
-        shape_id = self.counter_id   
+    def create_shape(self, data: tuple): 
+        type_shape = data[0]
+        dict_shape = data[1]
+        dict_shape["shape_id"] = self.counter_id   
         self.counter_id += 1
 
-        type_class = shape[0]
-        txt = shape_id + shape[1]
-
-        new_object = type_class.from_str(txt, shape_id)
+        new_object = type_shape.from_dict(dict_shape)
         self.shapes.append(new_object)
 
         return new_object
@@ -47,5 +46,10 @@ class ShapeManager:
             json.dump(all_shapes_dict, f)        
 
 
-    def load_from_json(self):
-        pass
+    # def load_from_json(self):
+    #     with open("shapes.json", "r", encoding="utf-8") as f:
+    #         data = json.load(f)
+    #         for shape in data:
+
+        
+    #     return data

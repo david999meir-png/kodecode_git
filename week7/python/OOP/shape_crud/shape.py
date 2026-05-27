@@ -21,9 +21,9 @@ class Shape(ABC):
     def to_dict(self):
         pass
 
-    @abstractmethod
-    def from_str(self, str):
-        pass
+    @classmethod
+    def from_dict(cls, data: dict):
+        return cls(**data)
     
     @abstractmethod
     def __str__(self):

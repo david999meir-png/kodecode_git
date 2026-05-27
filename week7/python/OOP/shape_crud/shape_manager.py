@@ -1,3 +1,4 @@
+import json
 from shape import Shape
 
 
@@ -37,7 +38,14 @@ class ShapeManager:
             raise ValueError(f"{shape_id} wasn't found.")
     
     def save_to_json(self):
-        pass
+        all_shapes_dict = []
+        for shape in self.shapes:
+            get_dict = shape.to_dict()
+            all_shapes_dict.append(get_dict)
+
+        with open("shapes.json", "w", encoding="utf-8") as f:
+            json.dump(all_shapes_dict, f)        
+
 
     def load_from_json(self):
         pass

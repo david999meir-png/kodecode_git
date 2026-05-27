@@ -63,9 +63,10 @@ class ShapeManager:
             json.dump(all_shapes_dict, f)        
 
     def load_from_json(self):
-
         with open("shapes.json", "r", encoding="utf-8") as f:
             data = json.load(f)
+            self.counter_id = self.get_max_id()
+            
             for shape in data:
                 type_class = self.get_class_type(shape)
 
@@ -85,4 +86,12 @@ class ShapeManager:
         type_class = shape_map[type_shape]
 
         return type_class
+    
+    def get_max_id(json_dict) -> int:
+        max_id = 0
+        for shape in json_dict:
+            if not shape.id > max_id:
+                continue
+            max_id = shape.id
+        return max_id
     

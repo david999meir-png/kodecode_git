@@ -21,7 +21,8 @@ class ShapeManager:
         return new_object
 
     def get_all_shapes(self):
-        pass
+        for s in self.shapes:
+            print(s)
     
     def update_shape(self, shape_id, new_data):
         pass

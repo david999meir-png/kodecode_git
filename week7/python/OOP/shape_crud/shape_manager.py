@@ -1,6 +1,6 @@
 import json
 from shape import Shape
-from Hexagon import Hexagon
+from hexagon import Hexagon
 from circle import Circle
 from rectangle import Rectangle
 from square import Square

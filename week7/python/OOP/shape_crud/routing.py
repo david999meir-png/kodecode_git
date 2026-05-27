@@ -125,7 +125,7 @@ class Menu:
             inner_choice = Menu.get_user_choice()
             
             shape_for_update = Menu.processing_choice(inner_choice)
-            shape_for_update["shape_id"] = shape_id
+            shape_for_update["shape_id"] = int(shape_id)
             self.manager.update_shape(shape_id, shape_for_update)
         
         elif choice == "4":

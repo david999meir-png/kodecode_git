@@ -7,11 +7,16 @@ menu_manager = Menu(shape_managet_muster)
 
 def main():
     set_logger()
-    
+
     while True:
-        result = menu_manager.flow_menu()
-        if result == "break":
-            break
+        try:
+            result = menu_manager.flow_menu()
+            if result == "break":
+                break
+
+        except (ValueError, FileNotFoundError) as e:
+            print(e)
+        
 
 
 if __name__ == "__main__":

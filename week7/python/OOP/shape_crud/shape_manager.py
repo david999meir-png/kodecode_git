@@ -2,15 +2,24 @@ from shape import Shape
 
 
 class ShapeManager:
-    counter_id = 0
 
     def __init__(self):
+        counter_id = 0
         self.shapes = [Shape]
         self.load_from_json()
 
-    def create_shape(self, shape):        
-        pass
-    
+    def create_shape(self, shape: tuple): 
+        shape_id = self.counter_id   
+        self.counter_id += 1
+
+        type_class = shape[0]
+        txt = shape_id + shape[1]
+
+        new_object = type_class.from_str(txt, shape_id)
+        self.shapes.append(new_object)
+
+        return new_object
+
     def get_all_shapes(self):
         pass
     

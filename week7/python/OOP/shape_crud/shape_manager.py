@@ -15,13 +15,12 @@ class ShapeManager:
         self.shapes = [Shape]
         self.load_from_json()
 
-    def create_shape(self, data: tuple): 
-        type_shape = data[0]
-        dict_shape = data[1]
-        dict_shape["shape_id"] = self.counter_id   
+    def create_shape(self, data: dict): 
+        type_shape = ShapeManager.get_class_type(data)
+        data["shape_id"] = self.counter_id   
         self.counter_id += 1
 
-        new_object = type_shape.from_dict(dict_shape)
+        new_object = type_shape.from_dict(data)
         self.shapes.append(new_object)
 
         return new_object
@@ -53,16 +52,25 @@ class ShapeManager:
 
 
     def load_from_json(self):
-        shape_maps = {"circle": Circle,
-                      "hexagon": Hexagon, 
-                      "rectangle": Rectangle, 
-                      "square": Square,
-                      "triangle": Tringle
-                      }
+
         with open("shapes.json", "r", encoding="utf-8") as f:
             data = json.load(f)
             for shape in data:
-                type_class = shape_maps[shape["shape_type"]]
-                
+                type_class = ShapeManager.get_class_type(shape)
+
                 new_object = type_class.from_dict(shape)
                 self.shapes.append(new_object)
+
+    @staticmethod
+    def get_class_type(dic: dict):
+        shape_map = {
+            "circle": Circle,
+            "hexagon": Hexagon, 
+            "rectangle": Rectangle, 
+            "square": Square,
+            "triangle": Tringle
+            }
+        type_shape = dic["shape_type"]
+        type_class = shape_map[type_shape]
+
+        return type_class

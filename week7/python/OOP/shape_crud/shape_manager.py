@@ -17,8 +17,10 @@ class ShapeManager:
 
     def create_shape(self, data: dict): 
         type_shape = ShapeManager.get_class_type(data)
-        data["shape_id"] = self.counter_id   
-        self.counter_id += 1
+
+        if data["shape_id"] == None:
+            data["shape_id"] = self.counter_id   
+            self.counter_id += 1
 
         new_object = type_shape.from_dict(data)
         self.shapes.append(new_object)
@@ -29,8 +31,22 @@ class ShapeManager:
         for s in self.shapes:
             print(s)
     
-    def update_shape(self, shape_id, new_data):
-        pass
+    def update_shape(self, shape_id: int, dic: dict):
+        for s in self.shapes:
+            if shape_id != s.id:
+                continue
+            shape_class = type(s)
+            data = s.to_dict()
+            data.update(dic)
+
+            self.create_shape(data)
+            self.shapes.remove(s)
+        
+        else:
+            raise ValueError(f"{shape_id} wasn't found")
+
+            
+
     
     def delete_shape(self, shape_id):
         for s in self.shapes:

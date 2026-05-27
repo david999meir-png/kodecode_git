@@ -23,3 +23,10 @@ class Circle(Shape):
                         }  
         return object_dict 
     
+    @classmethod
+    def from_str(cls, txt):
+        shape_id, shape_type, radius = txt.split()
+        return cls(shape_id, shape_type, radius)
+    
+    def __str__(self):
+        return f'shape id: {self.id} shape type: {self.shape_type} radius: {self.radius}'

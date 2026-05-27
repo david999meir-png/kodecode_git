@@ -9,11 +9,11 @@ class Shape(ABC):
         self.shape_type = shape_type
         logger.debug("object %s created, id %s", self.shape_type, self.id)
 
-    @abstractmethod
+    @property
     def get_area(self):
         pass
 
-    @abstractmethod
+    @property
     def get_perimeter(self):
         pass
 

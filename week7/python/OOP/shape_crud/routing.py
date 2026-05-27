@@ -1,4 +1,10 @@
+from shape_manager import ShapeManager
+
+
 class Menu:
+    def __init__(self, manager):
+        self.manager = manager
+        
 
     @staticmethod
     def show_main_menu():
@@ -70,5 +76,38 @@ class Menu:
         
         else:
             raise ValueError("wrong choice, please folow the menu.")
-        
         return shape_dict
+
+    def flow_menu(self):
+        Menu.show_main_menu()
+        choice = Menu.get_user_choice()
+
+        if choice == "1":
+            Menu.show_shapes_menu()
+            inner_choice = Menu.get_user_choice()
+
+            shape = Menu.processing_choice(inner_choice)
+            self.manager.create_shape(shape)
+        
+        elif choice == "2":
+            self.manager.get_all_shapes()
+        
+        elif choice == "3":
+            shape_id = input("enter shape id:\n")
+
+            Menu.show_shapes_menu()
+            inner_choice = Menu.get_user_choice()
+            
+            shape_for_update = Menu.processing_choice(inner_choice)
+            shape_for_update["shape_id"] = shape_id
+        
+        elif choice == "4":
+            shape_id = input("enter shape id:\n")
+            self.manager.delete_shape(shape_id)
+        
+        elif choice == "5":
+            return "break"
+        
+        else:
+            raise ValueError("wrong choice, please folow the menu.")
+            

@@ -12,7 +12,7 @@ class ShapeManager:
 
     def __init__(self):
         self.counter_id = 0
-        self.shapes = [Shape]
+        self.shapes = []
         self.load_from_json()
 
     def create_shape(self, data: dict): 
@@ -32,31 +32,27 @@ class ShapeManager:
             print(s)
     
     def update_shape(self, shape_id: int, dic: dict):
-        for s in self.shapes:
-            if shape_id != s.id:
+            shape_for_update = ShapeManager.search_shape_by_id(shape_id)
+            if shape_for_update is None:
+                raise ValueError(f"{shape_id} wasn't found")
+
+            self.shapes.remove(shape_for_update)
+            self.create_shape(dic)
+
+    def search_shape_by_id(self, shape_id):
+        for shape in self.shapes:
+            if shape.id != int(shape_id):
                 continue
-            shape_class = type(s)
-            data = s.to_dict()
-            data.update(dic)
-
-            self.create_shape(data)
-            self.shapes.remove(s)
-        
-        else:
-            raise ValueError(f"{shape_id} wasn't found")
-
-            
-
+            return shape
+        return None
     
     def delete_shape(self, shape_id):
-        for s in self.shapes:
-            if not s.id == shape_id:
-                continue
-            self.shapes.remove(s)
-        
-        else:
-            raise ValueError(f"{shape_id} wasn't found.")
-    
+            shape_for_remove = self.search_shape_by_id(shape_id)
+
+            if shape_for_remove is None:
+                raise ValueError(f"{shape_id} wasn't found.")
+            self.shapes.remove(shape_for_remove)
+            
     def save_to_json(self):
         all_shapes_dict = []
         for shape in self.shapes:

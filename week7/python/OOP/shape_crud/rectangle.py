@@ -21,7 +21,7 @@ class Rectangle(Shape):
                        "shape_id": self.id,
                        "shape_type": self.shape_type,
                        "width": self.width,
-                       "hight": self.height
+                       "height": self.height
                         }  
         return object_dict 
     

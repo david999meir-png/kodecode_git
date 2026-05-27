@@ -28,7 +28,13 @@ class ShapeManager:
         pass
     
     def delete_shape(self, shape_id):
-        pass
+        for s in self.shapes:
+            if not s.id == shape_id:
+                continue
+            self.shapes.remove(s)
+        
+        else:
+            raise ValueError(f"{shape_id} wasn't found.")
     
     def save_to_json(self):
         pass

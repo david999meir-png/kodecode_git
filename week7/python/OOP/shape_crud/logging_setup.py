@@ -1,21 +1,22 @@
 import logging
 
 def set_logger(name):
-    logger = logging.getLogger(name)
-    logger.setLevel(level=logging.DEBUG)
+    main_logger = logging.getLogger()
+    main_logger.setLevel(level=logging.DEBUG)
+    
+    if not main_logger.handlers:
+        stream_handler = logging.StreamHandler()
+        file_handler = logging.FileHandler("app.log")
 
-    stream_handler = logging.StreamHandler()
-    file_handler = logging.FileHandler("app.log")
+        formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
 
-    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
+        file_handler.setFormatter(formatter)
+        stream_handler.setFormatter(formatter)
 
-    file_handler.setFormatter(formatter)
-    stream_handler.setFormatter(formatter)
+        main_logger.addHandler(stream_handler)
+        main_logger.addHandler(file_handler)
 
-    logger.addHandler(stream_handler)
-    logger.addHandler(file_handler)
-
-    return logger
+    return main_logger
 
 
 if __name__ == "__main__":

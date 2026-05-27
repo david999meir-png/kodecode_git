@@ -40,7 +40,7 @@ class Menu:
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "circle",
-                        "radius": radius
+                        "radius": float(radius)
                           }
             
         elif choice == "2":
@@ -51,7 +51,7 @@ class Menu:
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "hexagon",
-                        "side": side
+                        "side": float(side)
                           }
             
         elif choice == "3":
@@ -66,8 +66,8 @@ class Menu:
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "rectangle",
-                        "width": width,
-                        "height": height
+                        "width": float(width),
+                        "height": float(height)
                           }
 
         elif choice == "4":
@@ -78,7 +78,7 @@ class Menu:
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "square",
-                        "side": side
+                        "side": float(side)
                           }
             
         elif choice == "5":
@@ -89,7 +89,7 @@ class Menu:
             shape_dict = {
                         "shape_id": None,
                         "shape_type": "triangle",
-                        "side": side
+                        "side": float(side)
                           }
         
         else:
@@ -126,15 +126,18 @@ class Menu:
             
             shape_for_update = Menu.processing_choice(inner_choice)
             shape_for_update["shape_id"] = shape_id
-            self.manager.update_shape(shape_for_update)
+            self.manager.update_shape(shape_id, shape_for_update)
         
         elif choice == "4":
             shape_id = input("enter shape id:\n")
             self.manager.delete_shape(shape_id)
         
         elif choice == "5":
+            print("good by...")
             return "break"
         
         else:
             raise ValueError("wrong choice, please folow the menu.")
             
+    def load_histoty(self) -> None:
+        self.manager.load_from_json()

@@ -31,7 +31,7 @@ class ShapeManager:
             print(s)
     
     def update_shape(self, shape_id: int, dic: dict):
-            shape_for_update = ShapeManager.search_shape_by_id(shape_id)
+            shape_for_update = self.search_shape_by_id(shape_id)
             if shape_for_update is None:
                 raise ValueError(f"{shape_id} wasn't found")
 
@@ -50,6 +50,7 @@ class ShapeManager:
 
             if shape_for_remove is None:
                 raise ValueError(f"{shape_id} wasn't found.")
+            
             self.shapes.remove(shape_for_remove)
             self.save_to_json()
             
@@ -63,15 +64,19 @@ class ShapeManager:
             json.dump(all_shapes_dict, f)        
 
     def load_from_json(self):
-        with open("shapes.json", "r", encoding="utf-8") as f:
-            data = json.load(f)
-            self.counter_id = self.get_max_id()
-            
+        try:
+            with open("shapes.json", "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.counter_id = self.get_max_id(data) + 1
+
             for shape in data:
                 type_class = self.get_class_type(shape)
 
                 new_object = type_class.from_dict(shape)
                 self.shapes.append(new_object)
+
+        except FileExistsError as e:
+            raise
 
     @staticmethod
     def get_class_type(dic: dict):
@@ -87,10 +92,11 @@ class ShapeManager:
 
         return type_class
     
-    def get_max_id(json_dict) -> int:
+    def get_max_id(self, json_dict) -> int:
         max_id = 0
+
         for shape in json_dict:
-            if not shape.id > max_id:
+            if not shape["shape_id"] > max_id:
                 continue
             max_id = shape.id
         return max_id

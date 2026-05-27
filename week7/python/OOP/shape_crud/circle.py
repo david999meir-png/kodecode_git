@@ -1,5 +1,8 @@
+import logging
 from shape import Shape
 
+
+logger = logging.getLogger(__name__)
 
 class Circle(Shape):
     pay = 3.14159

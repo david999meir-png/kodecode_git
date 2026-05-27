@@ -1,5 +1,8 @@
+import logging
 from shape import Shape
 
+
+logger = logging.getLogger(__name__)
 
 class Square(Shape):
     def __init__(self, shape_id, shape_type, side):

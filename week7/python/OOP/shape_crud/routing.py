@@ -1,4 +1,3 @@
-import logging
 from shape_manager import ShapeManager
 
 

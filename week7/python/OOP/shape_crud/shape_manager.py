@@ -21,7 +21,7 @@ class ShapeManager:
 
         type_shape = ShapeManager.get_class_type(data)
 
-        if data["shape_id"] == None:
+        if data["shape_id"] is None:
             data["shape_id"] = self.counter_id   
             self.counter_id += 1
             logger.info("a new shape %s created ID %s ", type_shape, self.counter_id - 1)
@@ -105,7 +105,7 @@ class ShapeManager:
                     logger.info("shapes loaded from json")
 
         except FileNotFoundError as e:
-            logger.warning("srart run with empty dada")
+            logger.warning("%s srart run with empty dada", e)
         
         except json.JSONDecodeError:
             logger.error("there is a problem with a json file")

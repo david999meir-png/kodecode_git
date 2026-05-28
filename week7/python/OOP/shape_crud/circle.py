@@ -29,4 +29,5 @@ class Circle(Shape):
         return object_dict 
     
     def __str__(self) -> str:
-        return f'shape id: {self.id} shape type: {self.shape_type} radius: {self.radius}'
+        return f'shape id: {self.id} shape type: {self.shape_type}\
+              radius: {self.radius} area: {self.get_area} perimeter: {self.get_perimeter}'

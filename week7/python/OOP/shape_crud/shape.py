@@ -28,7 +28,7 @@ class Shape(ABC):
         pass
     
     @classmethod
-    def from_dict(cls, data: dict) -> Shape:
+    def from_dict(cls, data: dict) -> "Shape":
         """Creates a new shape object from a given dictionary."""
 
         logger.debug("create a new object of %s", cls)

@@ -16,7 +16,7 @@ class Menu:
         print("Delete shape .4")
         print("get shape area .5")
         print("get shape primetter .6")
-        print("Exit .5")
+        print("Exit .0")
 
     @staticmethod
     def show_shapes_menu() -> None:

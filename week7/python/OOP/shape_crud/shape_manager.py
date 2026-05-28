@@ -131,8 +131,7 @@ class ShapeManager:
         for shape in json_dict:
             current_id = shape.get("shape_id", 0)
             if current_id > max_id:
-                continue
-            max_id = current_id
+                max_id = current_id
         logger.debug("calulate the max id %s", max_id)
         return max_id
     

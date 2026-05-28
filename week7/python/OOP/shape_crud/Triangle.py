@@ -27,4 +27,5 @@ class Tringle(Shape):
         return object_dict 
     
     def __str__(self) -> str:
-        return f'shape id: {self.id} shape type: {self.shape_type} side: {self.side}'
+        return f'shape id: {self.id} shape type: {self.shape_type} side: {self.side}\
+              area: {self.get_area} perimeter: {self.get_perimeter}'

@@ -25,6 +25,7 @@ class Circle(Shape):
                        "shape_type": self.shape_type,
                        "radius": self.radius
                         }  
+        logger.debug("object id %s converted to a dict.", self.id)
         return object_dict 
     
     def __str__(self) -> str:

@@ -26,11 +26,12 @@ class Shape(ABC):
         """Converts the shape object into a dictionary format."""
 
         pass
-
+    
     @classmethod
     def from_dict(cls, data: dict) -> Shape:
         """Creates a new shape object from a given dictionary."""
 
+        logger.debug("create a new object of %s", cls)
         return cls(**data)
     
     @abstractmethod

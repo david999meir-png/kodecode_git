@@ -1,3 +1,4 @@
+import logging
 from shape_manager import ShapeManager
 
 
@@ -13,6 +14,8 @@ class Menu:
         print("Show all shapes .2")
         print("Update shape .3")
         print("Delete shape .4")
+        print("get shape area .5")
+        print("get shape primetter .6")
         print("Exit .5")
 
     @staticmethod
@@ -135,6 +138,21 @@ class Menu:
             self.manager.delete_shape(shape_id)
         
         elif choice == "5":
+            shape_id = input("enter shape id:\n")
+            shape = self.manager.search_shape_by_id(shape_id)
+            if not shape:
+                raise ValueError(f"id {shape_id} wasn't found")
+            print(shape.get_area)
+
+        elif choice == "6":
+            shape_id = input("enter shape id:\n")
+            shape = self.manager.search_shape_by_id(shape_id)
+            if not shape:
+                raise ValueError(f"id {shape_id} wasn't found")
+            print(shape.get_perimeter)
+
+        
+        elif choice == "0":
             print("good by...")
             return "break"
         

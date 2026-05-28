@@ -1,0 +1,69 @@
+2026-05-28 14:07:22,746 | shape_manager | ERROR | there is a problem with a json file
+2026-05-28 14:07:36,754 | shape_manager | ERROR | there is a problem with a json file
+2026-05-28 14:07:45,649 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:07:45,649 | shape_manager | INFO | a new shape <class 'circle.Circle'> created ID 0 
+2026-05-28 14:07:45,650 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:07:45,650 | root | DEBUG | object circle created, id 0
+2026-05-28 14:07:45,650 | circle | DEBUG | object id 0 converted to a dict.
+2026-05-28 14:07:45,650 | shape_manager | INFO | shapes saved to json file
+2026-05-28 14:08:43,952 | shape_manager | DEBUG | all the shapes showed
+2026-05-28 14:09:24,987 | shape_manager | DEBUG | calulate the max id 0
+2026-05-28 14:09:24,988 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:09:24,988 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:09:24,988 | root | DEBUG | object circle created, id 0
+2026-05-28 14:09:24,988 | shape_manager | INFO | shapes loaded from json
+2026-05-28 14:09:31,214 | shape_manager | DEBUG | all the shapes showed
+2026-05-28 14:26:20,472 | shape_manager | DEBUG | calulate the max id 0
+2026-05-28 14:26:20,472 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:26:20,472 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:26:20,472 | root | DEBUG | object circle created, id 0
+2026-05-28 14:26:20,472 | shape_manager | INFO | shapes loaded from json
+2026-05-28 14:26:34,519 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-28 14:26:34,519 | shape_manager | INFO | a new shape <class 'rectangle.Rectangle'> created ID 1 
+2026-05-28 14:26:34,520 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-28 14:26:34,520 | root | DEBUG | object rectangle created, id 1
+2026-05-28 14:26:34,520 | circle | DEBUG | object id 0 converted to a dict.
+2026-05-28 14:26:34,520 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-28 14:26:34,521 | shape_manager | INFO | shapes saved to json file
+2026-05-28 14:30:17,498 | shape_manager | DEBUG | calulate the max id 0
+2026-05-28 14:30:17,498 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:30:17,499 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:30:17,499 | root | DEBUG | object circle created, id 0
+2026-05-28 14:30:17,499 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-28 14:30:17,499 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-28 14:30:17,499 | root | DEBUG | object rectangle created, id 1
+2026-05-28 14:30:17,499 | shape_manager | INFO | shapes loaded from json
+2026-05-28 14:30:21,937 | shape_manager | DEBUG | all the shapes showed
+2026-05-28 14:33:33,782 | shape_manager | DEBUG | calulate the max id 0
+2026-05-28 14:33:33,783 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:33:33,783 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:33:33,783 | root | DEBUG | object circle created, id 0
+2026-05-28 14:33:33,783 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-28 14:33:33,783 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-28 14:33:33,784 | root | DEBUG | object rectangle created, id 1
+2026-05-28 14:33:33,784 | shape_manager | INFO | shapes loaded from json
+2026-05-28 14:33:43,391 | shape_manager | DEBUG | shape rectangle found
+2026-05-28 14:34:44,330 | shape_manager | DEBUG | calulate the max id 0
+2026-05-28 14:34:44,330 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:34:44,330 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:34:44,331 | root | DEBUG | object circle created, id 0
+2026-05-28 14:34:44,331 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-28 14:34:44,331 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-28 14:34:44,331 | root | DEBUG | object rectangle created, id 1
+2026-05-28 14:34:44,331 | shape_manager | INFO | shapes loaded from json
+2026-05-28 14:34:49,781 | shape_manager | DEBUG | all the shapes showed
+2026-05-28 14:35:11,974 | shape_manager | DEBUG | shape rectangle found
+2026-05-28 14:36:38,388 | shape_manager | DEBUG | shape circle found
+2026-05-28 14:36:38,389 | shape_manager | DEBUG | extract class type <class 'circle.Circle'>
+2026-05-28 14:36:38,389 | root | DEBUG | create a new object of <class 'circle.Circle'>
+2026-05-28 14:36:38,390 | root | DEBUG | object circle created, id 0
+2026-05-28 14:36:38,390 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-28 14:36:38,390 | circle | DEBUG | object id 0 converted to a dict.
+2026-05-28 14:36:38,391 | shape_manager | INFO | shapes saved to json file
+2026-05-28 14:36:38,392 | shape_manager | INFO | shape id 0 updated
+2026-05-28 14:36:58,507 | shape_manager | DEBUG | all the shapes showed
+2026-05-28 14:37:13,437 | shape_manager | DEBUG | shape circle found
+2026-05-28 14:37:13,438 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-28 14:37:13,439 | shape_manager | INFO | shapes saved to json file
+2026-05-28 14:37:13,439 | shape_manager | WARNING | shape id: 0 DELETED !
+2026-05-28 14:37:43,388 | shape_manager | DEBUG | all the shapes showed

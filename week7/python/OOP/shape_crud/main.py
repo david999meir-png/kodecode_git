@@ -8,8 +8,6 @@ menu_manager = Menu(shape_managet_muster)
 def main() -> None:
     """The main entry point of the application."""
 
-    set_logger()
-
     while True:
         try:
             result = menu_manager.flow_menu()

@@ -26,6 +26,7 @@ class Rectangle(Shape):
                        "width": self.width,
                        "height": self.height
                         }  
+        logger.debug("object id %s converted to a dict.", self.id)
         return object_dict 
     
     def __str__(self) -> str:

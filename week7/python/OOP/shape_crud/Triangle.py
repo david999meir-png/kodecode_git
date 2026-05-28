@@ -23,6 +23,7 @@ class Tringle(Shape):
                        "shape_type": self.shape_type,
                        "side": self.side
                         }  
+        logger.debug("object id %s converted to a dict.", self.id)
         return object_dict 
     
     def __str__(self) -> str:

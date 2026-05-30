@@ -1,5 +1,6 @@
 import logging
 
+
 def set_logger(name):
     main_logger = logging.getLogger()
     main_logger.setLevel(level=logging.DEBUG)
@@ -8,7 +9,9 @@ def set_logger(name):
         stream_handler = logging.StreamHandler()
         file_handler = logging.FileHandler("app.log")
 
-        formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
+        formatter = logging.Formatter(
+            "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+        )
 
         file_handler.setFormatter(formatter)
         stream_handler.setFormatter(formatter)

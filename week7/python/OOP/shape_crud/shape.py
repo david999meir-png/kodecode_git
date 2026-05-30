@@ -3,6 +3,7 @@ import logging_setup
 
 logger = logging_setup.set_logger(__name__)
 
+
 class Shape(ABC):
     def __init__(self, shape_id, shape_type):
         self.id = shape_id
@@ -26,16 +27,14 @@ class Shape(ABC):
         """Converts the shape object into a dictionary format."""
 
         pass
-    
+
     @classmethod
     def from_dict(cls, data: dict) -> "Shape":
         """Creates a new shape object from a given dictionary."""
 
         logger.debug("create a new object of %s", cls)
         return cls(**data)
-    
+
     @abstractmethod
     def __str__(self) -> str:
         pass
-
-

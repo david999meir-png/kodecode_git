@@ -5,6 +5,7 @@ from logging_setup import set_logger
 shape_managet_muster = ShapeManager()
 menu_manager = Menu(shape_managet_muster)
 
+
 def main() -> None:
     """The main entry point of the application."""
 
@@ -18,7 +19,7 @@ def main() -> None:
 
         except (ValueError, FileNotFoundError) as e:
             print(e)
-        
+
 
 if __name__ == "__main__":
     main()

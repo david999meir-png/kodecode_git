@@ -113,6 +113,51 @@ class Menu:
             return False
         except ValueError:
             return False
+    
+    def handle_add_shape(self) -> None:
+        """handle with all the needed funcs and orginize them"""
+
+        Menu.show_shapes_menu()
+        inner_choice = Menu.get_user_choice()
+
+        shape = Menu.processing_choice(inner_choice)
+        self.manager.create_shape(shape)
+    
+    def handle_update_shape(self) -> None:
+        """handle with all the needed funcs and orginize them"""
+
+        shape_id = input("enter shape id:\n")
+
+        Menu.show_shapes_menu()
+        inner_choice = Menu.get_user_choice()
+
+        shape_for_update = Menu.processing_choice(inner_choice)
+        shape_for_update["shape_id"] = int(shape_id)
+        self.manager.update_shape(shape_id, shape_for_update)
+
+    def handle_delete_shape(self) -> None:
+        """handle with all the needed funcs and orginize them"""
+
+        shape_id = input("enter shape id:\n")
+        self.manager.delete_shape(shape_id)
+    
+    def handle_get_area(self) -> None:
+        """handle with all the needed funcs and orginize them"""
+
+        shape_id = input("enter shape id:\n")
+        shape = self.manager.search_shape_by_id(shape_id)
+        if not shape:
+            raise ValueError(f"id {shape_id} wasn't found")
+        print(shape.get_area)   
+
+    def handle_get_perimeter(self) -> None:
+        """handle with all the needed funcs and orginize them"""
+
+        shape_id = input("enter shape id:\n")
+        shape = self.manager.search_shape_by_id(shape_id)
+        if not shape:
+            raise ValueError(f"id {shape_id} wasn't found")
+        print(shape.get_perimeter)
 
     def flow_menu(self) -> str | None:
         """Starts the main interactive menu loop for the user."""
@@ -121,42 +166,22 @@ class Menu:
         choice = Menu.get_user_choice()
 
         if choice == "1":
-            Menu.show_shapes_menu()
-            inner_choice = Menu.get_user_choice()
-
-            shape = Menu.processing_choice(inner_choice)
-            self.manager.create_shape(shape)
+            self.handle_add_shape()
 
         elif choice == "2":
             self.manager.get_all_shapes()
 
         elif choice == "3":
-            shape_id = input("enter shape id:\n")
-
-            Menu.show_shapes_menu()
-            inner_choice = Menu.get_user_choice()
-
-            shape_for_update = Menu.processing_choice(inner_choice)
-            shape_for_update["shape_id"] = int(shape_id)
-            self.manager.update_shape(shape_id, shape_for_update)
+            self.handle_update_shape()
 
         elif choice == "4":
-            shape_id = input("enter shape id:\n")
-            self.manager.delete_shape(shape_id)
+            self.handle_delete_shape()
 
         elif choice == "5":
-            shape_id = input("enter shape id:\n")
-            shape = self.manager.search_shape_by_id(shape_id)
-            if not shape:
-                raise ValueError(f"id {shape_id} wasn't found")
-            print(shape.get_area)
+            self.handle_get_area()
 
         elif choice == "6":
-            shape_id = input("enter shape id:\n")
-            shape = self.manager.search_shape_by_id(shape_id)
-            if not shape:
-                raise ValueError(f"id {shape_id} wasn't found")
-            print(shape.get_perimeter)
+            self.handle_get_perimeter()
 
         elif choice == "0":
             print("good by...")

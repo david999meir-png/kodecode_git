@@ -247,3 +247,30 @@
 2026-05-31 07:47:33,829 | shape_manager | INFO | shapes saved to json file
 2026-05-31 07:47:36,310 | shape_manager | DEBUG | all the shapes showed
 2026-05-31 07:49:20,658 | shape_manager | DEBUG | shape triangle found
+2026-05-31 08:19:49,548 | shape_manager | DEBUG | calulate the max id 5
+2026-05-31 08:19:49,549 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 08:19:49,549 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 08:19:49,550 | root | DEBUG | object rectangle created, id 1
+2026-05-31 08:19:49,550 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 08:19:49,550 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 08:19:49,550 | root | DEBUG | object triangle created, id 5
+2026-05-31 08:19:49,551 | shape_manager | INFO | shapes loaded from json
+2026-05-31 08:19:56,854 | shape_manager | DEBUG | extract class type <class 'hexagon.Hexagon'>
+2026-05-31 08:19:56,854 | shape_manager | INFO | a new shape <class 'hexagon.Hexagon'> created ID 6 
+2026-05-31 08:19:56,854 | root | DEBUG | create a new object of <class 'hexagon.Hexagon'>
+2026-05-31 08:19:56,855 | root | DEBUG | object hexagon created, id 6
+2026-05-31 08:19:56,855 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 08:19:56,855 | Triangle | DEBUG | object id 5 converted to a dict.
+2026-05-31 08:19:56,856 | hexagon | DEBUG | object id 6 converted to a dict.
+2026-05-31 08:19:56,857 | shape_manager | INFO | shapes saved to json file
+2026-05-31 08:21:32,643 | shape_manager | DEBUG | calulate the max id 6
+2026-05-31 08:21:32,643 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 08:21:32,644 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 08:21:32,644 | root | DEBUG | object rectangle created, id 1
+2026-05-31 08:21:32,644 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 08:21:32,645 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 08:21:32,645 | root | DEBUG | object triangle created, id 5
+2026-05-31 08:21:32,645 | shape_manager | DEBUG | extract class type <class 'hexagon.Hexagon'>
+2026-05-31 08:21:32,645 | root | DEBUG | create a new object of <class 'hexagon.Hexagon'>
+2026-05-31 08:21:32,646 | root | DEBUG | object hexagon created, id 6
+2026-05-31 08:21:32,646 | shape_manager | INFO | shapes loaded from json

@@ -13,8 +13,8 @@ class Tringle(Shape):
 
     @property
     def get_area(self) -> float:
-        s = self.get_area / 2
-        return (s(s-self.side_1)(s-self.side_2)(s-self.side_3)) ** 0.5
+        s = self.get_perimeter / 2
+        return (s * (s-self.side_1) * (s-self.side_2) * (s-self.side_3)) ** 0.5
 
     @property
     def get_perimeter(self) -> float:
@@ -33,4 +33,4 @@ class Tringle(Shape):
 
     def __str__(self) -> str:
         return f"shape id: {self.id} shape type: {self.shape_type} side 1: {self.side_1} side 2:\
-              {self.side_2} side 3: {self.side_3} area: {self.get_area} perimeter: {self.get_perimeter}"
+              {self.side_2} side 3: {self.side_3} area: {round(self.get_area, 3)} perimeter: {self.get_perimeter}"

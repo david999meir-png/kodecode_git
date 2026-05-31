@@ -67,3 +67,183 @@
 2026-05-28 14:37:13,439 | shape_manager | INFO | shapes saved to json file
 2026-05-28 14:37:13,439 | shape_manager | WARNING | shape id: 0 DELETED !
 2026-05-28 14:37:43,388 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:24:36,694 | shape_manager | DEBUG | calulate the max id 1
+2026-05-31 07:24:36,694 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:24:36,694 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:24:36,694 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:24:36,695 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:25:00,305 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:25:00,305 | shape_manager | INFO | a new shape <class 'Triangle.Tringle'> created ID 2 
+2026-05-31 07:25:00,305 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:25:00,306 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:25:00,306 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:25:00,306 | Triangle | DEBUG | object id 2 converted to a dict.
+2026-05-31 07:25:00,307 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:28:00,990 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:28:00,991 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:28:00,991 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:28:00,991 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:28:00,991 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:28:00,992 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:28:00,992 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:28:00,992 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:30:34,419 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:30:34,419 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:30:34,419 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:30:34,419 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:30:34,419 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:30:34,420 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:30:34,420 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:30:34,420 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:32:20,922 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:32:20,923 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:32:20,923 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:32:20,923 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:32:20,923 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:32:20,923 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:32:20,923 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:32:20,923 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:33:00,848 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:33:00,848 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:33:00,848 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:33:00,849 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:33:00,849 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:33:00,849 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:33:00,849 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:33:00,849 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:33:39,756 | shape_manager | DEBUG | shape triangle found
+2026-05-31 07:33:39,757 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:33:39,758 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:33:39,758 | shape_manager | WARNING | shape id: 2 DELETED !
+2026-05-31 07:34:01,532 | shape_manager | DEBUG | calulate the max id 1
+2026-05-31 07:34:01,533 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:34:01,533 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:34:01,533 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:34:01,533 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:34:04,165 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:34:28,985 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:34:28,985 | shape_manager | INFO | a new shape <class 'Triangle.Tringle'> created ID 2 
+2026-05-31 07:34:28,985 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:34:28,985 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:34:28,986 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:34:28,986 | Triangle | DEBUG | object id 2 converted to a dict.
+2026-05-31 07:34:28,987 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:36:36,014 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:36:36,014 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:36:36,014 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:36:36,014 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:36:36,014 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:36:36,015 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:36:36,015 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:36:36,015 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:36:48,187 | shape_manager | DEBUG | calulate the max id 2
+2026-05-31 07:36:48,187 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:36:48,187 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:36:48,188 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:36:48,188 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:36:48,188 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:36:48,188 | root | DEBUG | object triangle created, id 2
+2026-05-31 07:36:48,188 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:36:52,805 | shape_manager | DEBUG | shape triangle found
+2026-05-31 07:36:52,806 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:36:52,807 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:36:52,807 | shape_manager | WARNING | shape id: 2 DELETED !
+2026-05-31 07:37:01,493 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:37:13,339 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:37:13,340 | shape_manager | INFO | a new shape <class 'Triangle.Tringle'> created ID 3 
+2026-05-31 07:37:13,340 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:37:13,341 | root | DEBUG | object triangle created, id 3
+2026-05-31 07:37:13,341 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:37:13,341 | Triangle | DEBUG | object id 3 converted to a dict.
+2026-05-31 07:37:13,343 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:40:27,172 | shape_manager | DEBUG | calulate the max id 3
+2026-05-31 07:40:27,173 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:40:27,173 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:40:27,173 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:40:27,174 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:40:27,174 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:40:27,175 | root | DEBUG | object triangle created, id 3
+2026-05-31 07:40:27,175 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:40:47,490 | shape_manager | DEBUG | calulate the max id 3
+2026-05-31 07:40:47,491 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:40:47,492 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:40:47,492 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:40:47,493 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:40:47,493 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:40:47,493 | root | DEBUG | object triangle created, id 3
+2026-05-31 07:40:47,493 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:40:50,638 | shape_manager | DEBUG | calulate the max id 3
+2026-05-31 07:40:50,639 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:40:50,640 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:40:50,640 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:40:50,641 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:40:50,641 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:40:50,641 | root | DEBUG | object triangle created, id 3
+2026-05-31 07:40:50,642 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:41:09,708 | shape_manager | DEBUG | shape triangle found
+2026-05-31 07:41:09,708 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:41:09,709 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:41:09,710 | shape_manager | WARNING | shape id: 3 DELETED !
+2026-05-31 07:41:19,191 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:41:53,554 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:41:53,554 | shape_manager | INFO | a new shape <class 'Triangle.Tringle'> created ID 4 
+2026-05-31 07:41:53,555 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:41:53,555 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:41:53,555 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:41:53,555 | Triangle | DEBUG | object id 4 converted to a dict.
+2026-05-31 07:41:53,556 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:42:25,031 | shape_manager | DEBUG | calulate the max id 4
+2026-05-31 07:42:25,031 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:42:25,032 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:42:25,032 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:42:25,032 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:42:25,032 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:42:25,033 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:42:25,033 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:42:39,271 | shape_manager | DEBUG | calulate the max id 4
+2026-05-31 07:42:39,271 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:42:39,272 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:42:39,272 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:42:39,273 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:42:39,273 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:42:39,273 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:42:39,274 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:43:27,786 | shape_manager | DEBUG | calulate the max id 4
+2026-05-31 07:43:27,787 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:43:27,787 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:43:27,788 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:43:27,788 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:43:27,788 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:43:27,789 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:43:27,789 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:43:32,145 | shape_manager | DEBUG | calulate the max id 4
+2026-05-31 07:43:32,145 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:43:32,146 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:43:32,146 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:43:32,146 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:43:32,146 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:43:32,146 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:43:32,146 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:43:35,504 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:46:19,051 | shape_manager | DEBUG | calulate the max id 4
+2026-05-31 07:46:19,052 | shape_manager | DEBUG | extract class type <class 'rectangle.Rectangle'>
+2026-05-31 07:46:19,053 | root | DEBUG | create a new object of <class 'rectangle.Rectangle'>
+2026-05-31 07:46:19,054 | root | DEBUG | object rectangle created, id 1
+2026-05-31 07:46:19,054 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:46:19,055 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:46:19,055 | root | DEBUG | object triangle created, id 4
+2026-05-31 07:46:19,055 | shape_manager | INFO | shapes loaded from json
+2026-05-31 07:46:31,522 | shape_manager | DEBUG | shape triangle found
+2026-05-31 07:46:31,522 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:46:31,524 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:46:31,524 | shape_manager | WARNING | shape id: 4 DELETED !
+2026-05-31 07:46:41,025 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:47:33,826 | shape_manager | DEBUG | extract class type <class 'Triangle.Tringle'>
+2026-05-31 07:47:33,827 | shape_manager | INFO | a new shape <class 'Triangle.Tringle'> created ID 5 
+2026-05-31 07:47:33,827 | root | DEBUG | create a new object of <class 'Triangle.Tringle'>
+2026-05-31 07:47:33,827 | root | DEBUG | object triangle created, id 5
+2026-05-31 07:47:33,827 | rectangle | DEBUG | object id 1 converted to a dict.
+2026-05-31 07:47:33,827 | Triangle | DEBUG | object id 5 converted to a dict.
+2026-05-31 07:47:33,829 | shape_manager | INFO | shapes saved to json file
+2026-05-31 07:47:36,310 | shape_manager | DEBUG | all the shapes showed
+2026-05-31 07:49:20,658 | shape_manager | DEBUG | shape triangle found

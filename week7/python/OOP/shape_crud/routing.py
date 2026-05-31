@@ -36,7 +36,7 @@ class Menu:
         if choice == "1":
             radius = input("enter radius:\n")
             if not Menu.is_valid_num(radius):
-                raise ValueError("invalid input, please enter numnet only.")
+                raise ValueError("invalid input, please enter positive numner only.")
 
             shape_dict = {
                 "shape_id": None,
@@ -47,7 +47,7 @@ class Menu:
         elif choice == "2":
             side = input("enter side:\n")
             if not Menu.is_valid_num(side):
-                raise ValueError("invalid input, please enter numnet only.")
+                raise ValueError("invalid input, please enter positive numner only.")
 
             shape_dict = {
                 "shape_id": None,
@@ -58,11 +58,11 @@ class Menu:
         elif choice == "3":
             width = input("enter width:\n")
             if not Menu.is_valid_num(width):
-                raise ValueError("invalid input, please enter numnet only.")
+                raise ValueError("invalid input, please enter positive numner only.")
 
             height = input("enter haight:\n")
             if not Menu.is_valid_num(height):
-                raise ValueError("invalid input, please enter numnet only.")
+                raise ValueError("invalid input, please enter positive numner only.")
 
             shape_dict = {
                 "shape_id": None,
@@ -79,14 +79,25 @@ class Menu:
             shape_dict = {"shape_id": None, "shape_type": "square", "side": float(side)}
 
         elif choice == "5":
-            side = input("enter side:\n")
-            if not Menu.is_valid_num(side):
-                raise ValueError("invalid input, please enter numnet only.")
+            side_1 = input("enter side_1:\n")
+            if not Menu.is_valid_num(side_1):
+                raise ValueError("invalid input, please enter positive numner only.")
+            
+            side_2 = input("enter side_2:\n")
+            if not Menu.is_valid_num(side_2):
+                raise ValueError("invalid input, please enter positive numner only.")
+            
+            side_3 = input("enter side_3:\n")
+            if not Menu.is_valid_num(side_3):
+                raise ValueError("invalid input, please enter positive numner only.")
+
 
             shape_dict = {
                 "shape_id": None,
                 "shape_type": "triangle",
-                "side": float(side),
+                "side_1": float(side_1),
+                "side_2": float(side_2),
+                "side_3": float(side_3),
             }
 
         else:
@@ -97,7 +108,9 @@ class Menu:
     def is_valid_num(n: str) -> bool:
         try:
             n = float(n)
-            return True
+            if n > 0:
+                return True
+            return False
         except ValueError:
             return False
 
